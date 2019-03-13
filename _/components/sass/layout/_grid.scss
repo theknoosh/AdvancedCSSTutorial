@@ -3,7 +3,7 @@
 //   background-color: $light-gray;
   margin: 0 auto;
   // margin-bottom: $gutter-verticle;
-  color: white;
+  // color: white;
   &:not(:last-child) {
     margin-bottom: $gutter-verticle;
   }
@@ -13,7 +13,6 @@
   // Attribute selector
   // selector begins with(^=) col-
   [class^="col-"] {
-    background-color: orangered;
     float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
