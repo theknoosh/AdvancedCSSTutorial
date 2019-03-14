@@ -11,4 +11,11 @@
     rgba($dark-green, 0.8)),
     url('../../images/nat-4.jpg');
     background-size: cover;
+
+    margin-top: -8.5rem;
+
+    transform: skewY(-7deg);
+    & > * { // This means select all DIRECT children of the .section-features
+        transform: skewY(7deg); 
+    }
 }
