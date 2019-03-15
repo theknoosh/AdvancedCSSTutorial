@@ -28,11 +28,21 @@
 
   &--white {
     background-color: $color-white;
-    color: $light-gray;
+    color: $color-grey-dark;
 
     &::after {
       content: "";
       background-color: $color-white;
+    }
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      content: "";
+      background-color: $color-primary;
     }
   }
 
