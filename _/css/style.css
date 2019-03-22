@@ -565,6 +565,93 @@ body {
   opacity: 1;
 }
 
+/* line 1, ../components/sass/components/_popup.scss */
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s;
+}
+/* line 13, ../components/sass/components/_popup.scss */
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+/* line 18, ../components/sass/components/_popup.scss */
+.popup:target .popup__content {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+/* line 24, ../components/sass/components/_popup.scss */
+.popup__close:link, .popup__close:visited {
+  color: #777;
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  font-size: 3rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all .3s;
+  line-height: .75;
+}
+/* line 37, ../components/sass/components/_popup.scss */
+.popup__close:hover {
+  color: #55c57a;
+}
+/* line 42, ../components/sass/components/_popup.scss */
+.popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 12px;
+  display: table;
+  overflow: hidden;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all .5s .3s;
+}
+/* line 55, ../components/sass/components/_popup.scss */
+.popup__left {
+  width: 33.333333%;
+  display: table-cell;
+}
+/* line 60, ../components/sass/components/_popup.scss */
+.popup__right {
+  width: 66.666667%;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 6rem;
+}
+/* line 67, ../components/sass/components/_popup.scss */
+.popup__img {
+  display: block;
+  width: 100%;
+}
+/* line 72, ../components/sass/components/_popup.scss */
+.popup__text {
+  font-size: 1.4rem;
+  -moz-column-count: 2;
+  -moz-column-gap: 4rem;
+  -moz-column-rule: 1px solid #999;
+  column-count: 2;
+  column-gap: 4rem;
+  column-rule: 1px solid #999;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
 /* line 1, ../components/sass/components/_story.scss */
 .story {
   width: 75%;
@@ -758,6 +845,149 @@ body {
   left: 50%;
   transform: translate(-50%, -85%);
   text-align: center;
+}
+
+/* line 2, ../components/sass/layout/_navigation.scss */
+.navigation__checkbox {
+  display: none;
+}
+/* line 6, ../components/sass/layout/_navigation.scss */
+.navigation__button {
+  background-color: #fff;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25);
+  text-align: center;
+  cursor: pointer;
+}
+/* line 20, ../components/sass/layout/_navigation.scss */
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#7ed56f, #28b485);
+  z-index: 1000;
+  transition: transform 1s cubic-bezier(1, 0, 0, 1);
+}
+/* line 37, ../components/sass/layout/_navigation.scss */
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+/* line 49, ../components/sass/layout/_navigation.scss */
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+/* line 59, ../components/sass/layout/_navigation.scss */
+.navigation__items {
+  margin: 1rem;
+}
+/* line 64, ../components/sass/layout/_navigation.scss */
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 0.5rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 220%;
+  transition: all 0.4s;
+}
+/* line 82, ../components/sass/layout/_navigation.scss */
+.navigation__link:link span, .navigation__link:visited span {
+  margin-right: 1rem;
+  display: inline-block;
+  color: yellow;
+}
+/* line 89, ../components/sass/layout/_navigation.scss */
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #55c57a;
+  transform: translateX(1rem);
+}
+/* line 94, ../components/sass/layout/_navigation.scss */
+.navigation__link:hover span, .navigation__link:active span {
+  color: red;
+}
+/* line 100, ../components/sass/layout/_navigation.scss */
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80);
+}
+/* line 104, ../components/sass/layout/_navigation.scss */
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%;
+}
+/* line 109, ../components/sass/layout/_navigation.scss */
+.navigation__icon {
+  position: relative;
+  margin-top: 3.5rem;
+}
+/* line 112, ../components/sass/layout/_navigation.scss */
+.navigation__icon, .navigation__icon::before, .navigation__icon::after {
+  width: 3.5rem;
+  height: 2px;
+  background-color: #777;
+  display: inline-block;
+}
+/* line 120, ../components/sass/layout/_navigation.scss */
+.navigation__icon::before, .navigation__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+/* line 128, ../components/sass/layout/_navigation.scss */
+.navigation__icon::before {
+  top: -0.8rem;
+}
+/* line 131, ../components/sass/layout/_navigation.scss */
+.navigation__icon::after {
+  top: 0.8rem;
+}
+/* line 136, ../components/sass/layout/_navigation.scss */
+.navigation__button:hover .navigation__icon::before {
+  top: -1.5rem;
+}
+/* line 140, ../components/sass/layout/_navigation.scss */
+.navigation__button:hover .navigation__icon::after {
+  top: 1.5rem;
+}
+/* line 144, ../components/sass/layout/_navigation.scss */
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent;
+}
+/* line 148, ../components/sass/layout/_navigation.scss */
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+/* line 153, ../components/sass/layout/_navigation.scss */
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
 }
 
 /* line 1, ../components/sass/pages/_home.scss */
