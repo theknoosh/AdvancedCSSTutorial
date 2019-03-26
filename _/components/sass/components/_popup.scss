@@ -12,7 +12,7 @@
 
     &:target {
         opacity: 1;
-        visibility: visible;
+        visibility: visible; 
     }
 
     &:target &__content {
