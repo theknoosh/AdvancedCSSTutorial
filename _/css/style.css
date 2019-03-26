@@ -827,7 +827,21 @@ body {
   font-size: 1.6rem;
   transform: skewX(-12deg);
 }
-/* line 11, ../components/sass/components/_story.scss */
+@media (max-width: 56.25em) {
+  /* line 1, ../components/sass/components/_story.scss */
+  .story {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+}
+@media (max-width: 37.5em) {
+  /* line 1, ../components/sass/components/_story.scss */
+  .story {
+    transform: skewX(0);
+  }
+}
+/* line 21, ../components/sass/components/_story.scss */
 .story__shape {
   width: 15rem;
   height: 15rem;
@@ -839,17 +853,29 @@ body {
   transform: translateX(-3rem) skewX(12deg);
   position: relative;
 }
-/* line 24, ../components/sass/components/_story.scss */
+@media (max-width: 37.5em) {
+  /* line 21, ../components/sass/components/_story.scss */
+  .story__shape {
+    transform: translateX(-3rem) skewX(0);
+  }
+}
+/* line 38, ../components/sass/components/_story.scss */
 .story__img {
   height: 100%;
   transform: translateX(-3.5rem) scale(1.4);
-  transition: all .5s;
+  transition: all 0.5s;
 }
-/* line 30, ../components/sass/components/_story.scss */
+/* line 44, ../components/sass/components/_story.scss */
 .story__text {
   transform: skewX(12deg);
 }
-/* line 34, ../components/sass/components/_story.scss */
+@media (max-width: 37.5em) {
+  /* line 44, ../components/sass/components/_story.scss */
+  .story__text {
+    transform: skewX(0);
+  }
+}
+/* line 52, ../components/sass/components/_story.scss */
 .story__caption {
   position: absolute;
   top: 50%;
@@ -860,15 +886,15 @@ body {
   font-size: 1.7rem;
   text-align: center;
   opacity: 0;
-  transition: all .5s;
+  transition: all 0.5s;
   backface-visibility: hidden;
 }
-/* line 48, ../components/sass/components/_story.scss */
+/* line 66, ../components/sass/components/_story.scss */
 .story:hover .story__caption {
   opacity: 1;
   transform: translate(-50%, -50%);
 }
-/* line 53, ../components/sass/components/_story.scss */
+/* line 71, ../components/sass/components/_story.scss */
 .story:hover .story__img {
   transform: translateX(-3.5rem) scale(1);
   filter: blur(3px) brightness(80%);
