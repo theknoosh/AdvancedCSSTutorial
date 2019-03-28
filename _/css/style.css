@@ -122,7 +122,7 @@ body {
   /* line 13, ../components/sass/base/_typography.scss */
   .heading-primary--main {
     letter-spacing: 1rem;
-    font-family: 5rem;
+    font-size: 5rem;
   }
 }
 /* line 27, ../components/sass/base/_typography.scss */
@@ -138,10 +138,11 @@ body {
   /* line 27, ../components/sass/base/_typography.scss */
   .heading-primary--sub {
     letter-spacing: .5rem;
+    font-size: 1.5rem;
   }
 }
 
-/* line 41, ../components/sass/base/_typography.scss */
+/* line 42, ../components/sass/base/_typography.scss */
 .heading-secondary {
   font-size: 3.5rem;
   text-transform: uppercase;
@@ -155,35 +156,35 @@ body {
   transition: all .2s;
 }
 @media (max-width: 56.25em) {
-  /* line 41, ../components/sass/base/_typography.scss */
+  /* line 42, ../components/sass/base/_typography.scss */
   .heading-secondary {
     font-size: 3rem;
   }
 }
 @media (max-width: 37.5em) {
-  /* line 41, ../components/sass/base/_typography.scss */
+  /* line 42, ../components/sass/base/_typography.scss */
   .heading-secondary {
     font-size: 2.5rem;
   }
 }
-/* line 60, ../components/sass/base/_typography.scss */
+/* line 61, ../components/sass/base/_typography.scss */
 .heading-secondary:hover {
   transform: skewY(3deg) scale(1.2);
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-/* line 66, ../components/sass/base/_typography.scss */
+/* line 67, ../components/sass/base/_typography.scss */
 .heading-tertiary {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-/* line 72, ../components/sass/base/_typography.scss */
+/* line 73, ../components/sass/base/_typography.scss */
 .paragraph {
   font-size: 1.6rem;
 }
-/* line 74, ../components/sass/base/_typography.scss */
+/* line 75, ../components/sass/base/_typography.scss */
 .paragraph:not(:last-child) {
   margin-bottom: 3rem;
 }
@@ -228,6 +229,12 @@ body {
 /* line 20, ../components/sass/base/_utilities.scss */
 .u-margin-top-huge {
   margin-top: 10rem !important;
+}
+@media (max-width: 56.25em) {
+  /* line 20, ../components/sass/base/_utilities.scss */
+  .u-margin-top-huge {
+    margin-top: 5rem !important;
+  }
 }
 
 /* line 1, ../components/sass/components/_bg-video.scss */
@@ -1296,7 +1303,7 @@ body {
 @media (max-width: 56.25em) {
   /* line 32, ../components/sass/pages/_home.scss */
   .section-tours {
-    padding: 20rem 10rem;
+    padding: 25rem 0 10rem 0;
   }
 }
 

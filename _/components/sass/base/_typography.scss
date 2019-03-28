@@ -21,7 +21,7 @@ body {
 
         @include respond(phone) {
             letter-spacing: 1rem;
-            font-family: 5rem;
+            font-size: 5rem;
         }
     }
     &--sub {
@@ -34,6 +34,7 @@ body {
 
         @include respond(phone) {
             letter-spacing: .5rem;
+            font-size: 1.5rem;
         }
     }
 }
