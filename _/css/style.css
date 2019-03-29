@@ -659,21 +659,27 @@ body {
   display: block;
   transition: all .3s;
 }
-/* line 18, ../components/sass/components/_form.scss */
+@media (max-width: 56.25em) {
+  /* line 6, ../components/sass/components/_form.scss */
+  .form__input {
+    width: 100%;
+  }
+}
+/* line 23, ../components/sass/components/_form.scss */
 .form__input:focus {
   outline: none;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   border-bottom: 3px solid #55c57a;
 }
-/* line 23, ../components/sass/components/_form.scss */
+/* line 28, ../components/sass/components/_form.scss */
 .form__input:focus:invalid {
   border-bottom: 3px solid #ff7730;
 }
-/* line 27, ../components/sass/components/_form.scss */
+/* line 32, ../components/sass/components/_form.scss */
 .form__input::-webkit-input-placeholder {
   color: #999;
 }
-/* line 34, ../components/sass/components/_form.scss */
+/* line 39, ../components/sass/components/_form.scss */
 .form__label {
   font-size: 1.2rem;
   font-weight: 700;
@@ -682,29 +688,36 @@ body {
   display: block;
   transition: all .3s;
 }
-/* line 43, ../components/sass/components/_form.scss */
+/* line 48, ../components/sass/components/_form.scss */
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem);
 }
-/* line 49, ../components/sass/components/_form.scss */
+/* line 54, ../components/sass/components/_form.scss */
 .form__radio-group {
   width: 49%;
   display: inline-block;
 }
-/* line 54, ../components/sass/components/_form.scss */
+@media (max-width: 56.25em) {
+  /* line 54, ../components/sass/components/_form.scss */
+  .form__radio-group {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+/* line 65, ../components/sass/components/_form.scss */
 .form__radio-input {
   display: none;
 }
-/* line 58, ../components/sass/components/_form.scss */
+/* line 69, ../components/sass/components/_form.scss */
 .form__radio-label {
   font-size: 1.6rem;
   cursor: pointer;
   position: relative;
   padding-left: 3.5rem;
 }
-/* line 65, ../components/sass/components/_form.scss */
+/* line 76, ../components/sass/components/_form.scss */
 .form__radio-button {
   height: 3rem;
   width: 3rem;
@@ -715,7 +728,7 @@ body {
   top: -.5rem;
   left: 0;
 }
-/* line 74, ../components/sass/components/_form.scss */
+/* line 85, ../components/sass/components/_form.scss */
 .form__radio-button::after {
   content: '';
   display: block;
@@ -730,7 +743,7 @@ body {
   opacity: 0;
   transition: opacity .3s;
 }
-/* line 90, ../components/sass/components/_form.scss */
+/* line 101, ../components/sass/components/_form.scss */
 .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
   opacity: 1;
 }
@@ -1334,13 +1347,37 @@ body {
 /* line 61, ../components/sass/pages/_home.scss */
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../../images/nat-10.jpg);
-  background-size: cover;
+  background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
-  height: 50rem;
 }
-/* line 71, ../components/sass/pages/_home.scss */
+@media (max-width: 75em) {
+  /* line 61, ../components/sass/pages/_home.scss */
+  .book {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 70%, transparent 70%), url(../../images/nat-10.jpg);
+    background-size: cover;
+  }
+}
+@media (max-width: 56.25em) {
+  /* line 61, ../components/sass/pages/_home.scss */
+  .book {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../../images/nat-10.jpg);
+  }
+}
+/* line 87, ../components/sass/pages/_home.scss */
 .book__form {
   width: 50%;
   padding: 6rem;
+}
+@media (max-width: 75em) {
+  /* line 87, ../components/sass/pages/_home.scss */
+  .book__form {
+    width: 70%;
+  }
+}
+@media (max-width: 75em) {
+  /* line 87, ../components/sass/pages/_home.scss */
+  .book__form {
+    width: 100%;
+  }
 }
