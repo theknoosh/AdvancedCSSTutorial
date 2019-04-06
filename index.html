@@ -79,21 +79,41 @@
           </div>
           <div class="col-1-of-2">
             <div class="composition">
-              <img
+
+              <img srcset="images/nat-1.jpg 300w, images/nat-1-large.jpg 1000w"
+                sizes="(max-width: 900px) 20vw, (max-width:600px) 30vw, 300px"
+                alt="Photo 1"
+                class="composition_photo composition_photo--p1"
+                src="images/nat-1-large.jpg"/>
+
+              <img srcset="images/nat-2.jpg 300w, images/nat-2-large.jpg 1000w"
+                sizes="(max-width: 900px) 20vw, (max-width:600px) 30vw, 300px"
+                alt="Photo 2"
+                class="composition_photo composition_photo--p2"
+                src="images/nat-2-large.jpg"/>
+
+              <img srcset="images/nat-3.jpg 300w, images/nat-3-large.jpg 1000w"
+                sizes="(max-width: 900px) 20vw, (max-width:600px) 30vw, 300px"
+                alt="Photo 3"
+                class="composition_photo composition_photo--p3"
+                src="images/nat-3-large.jpg"/>
+
+
+              <!-- <img
                 src="images/nat-1-large.jpg"
                 alt="Photo 1"
                 class="composition_photo composition_photo--p1"
-              />
-              <img
+              /> -->
+              <!-- <img
                 src="images/nat-2-large.jpg"
                 alt="Photo 2"
                 class="composition_photo composition_photo--p2"
-              />
-              <img
+              /> -->
+              <!-- <img
                 src="images/nat-3-large.jpg"
                 alt="Photo 3"
                 class="composition_photo composition_photo--p3"
-              />
+              /> -->
             </div>
           </div>
         </div>
@@ -352,7 +372,11 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="images/logo-green-2x.png" alt="Full logo" class="footer__logo">
+        <picture class="footer__logo">
+          <source srcset="images/logo-green-small-1x.png 1x, images/logo-green-small-2x.png 2x"
+              media="(max-width:37.5em)">
+          <img srcset="images/logo-green-1x.png 1x, images/logo-green-2x.png 2x" alt="Full logo" src="images/logo-green-small-2x.png">
+        </picture>
       </div>
       <div class="row">
         <div class="col-1-of-2">

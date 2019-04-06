@@ -20,13 +20,13 @@
             top: -2rem;
 
             @include respond (tab-port){
-                top: 0rem;
-                transform: scale(1.2);
+                top: 1rem;
+                transform: scale(1.1);
             }
         }
 
         &--p2 {
-            right: -1;
+            right: 0;
             top: 2rem;
 
             @include respond (tab-port){
